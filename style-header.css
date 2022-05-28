@@ -1,0 +1,191 @@
+    * {
+        font-family: 'Kumbh Sans', 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+        outline: none;
+        border: none;
+        color: var(--primary-violet);
+        /* border: 1px solid #07f; */
+    }
+    
+     :root {
+        --primary-green: hsl(115deg 19% 38%);
+        --primary-violet: hsl(308, 33%, 17%);
+        --bg-pale-orange: hsl(33deg 58% 96%);
+        --bg-white: hsl(0, 0%, 100%);
+    }
+    
+    html {
+        font-size: 63.5%;
+        scroll-behavior: smooth;
+        scroll-padding: 10rem;
+    }
+    
+    body {
+        min-width: 30rem;
+        position: relative;
+    }
+    
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .logo * {
+        font-weight: 600;
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+    
+    .primary-cta {
+        background: var(--primary-violet);
+        color: var(--bg-white);
+        padding: 1rem 2.5rem;
+    }
+    
+    .primary-cta:hover {
+        background: var(--primary-green);
+    }
+    
+    button {
+        cursor: pointer;
+    }
+    
+    img {
+        min-width: 100%;
+    }
+    /* /////////////////// HEADER ////////////////// */
+    
+    .header {
+        --header-padding: 2rem;
+        position: fixed;
+        width: 100%;
+    }
+    
+    .header-nav-box {
+        margin: auto;
+        max-width: 100rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem var(--header-padding);
+        position: relative;
+    }
+    
+    .header-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        left: 0;
+        background: var(--bg-white);
+        padding: 0 var(--header-padding);
+        transition: all 1s;
+    }
+    
+    .header-login-btn,
+    .header-nav {
+        position: absolute;
+        top: 5rem;
+        overflow: hidden;
+        max-height: 0vh;
+    }
+    
+    .header-nav a:hover {
+        color: var(--primary-green);
+    }
+    
+    .header-login-btn {
+        right: 2rem;
+        padding: 0 2.5rem;
+        opacity: 0;
+    }
+    /* Menu Toggle Button CSS */
+    
+    .menu-toggle-btn {
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: var(--bg-white);
+    }
+    
+    .menu-toggle-btn img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .menu-toggle-btn .menu-toggle-open {
+        opacity: 1;
+    }
+    
+    .menu-toggle-btn.opened .menu-toggle-open {
+        top: 100%;
+        opacity: 0;
+    }
+    
+    .menu-toggle-btn .menu-toggle-close {
+        top: 100%;
+        opacity: 0;
+    }
+    
+    .menu-toggle-btn.opened .menu-toggle-close {
+        opacity: 1;
+        top: 50%;
+    }
+    
+    .header-nav-box.opened .header-nav {
+        padding: 1rem var(--header-padding);
+        max-height: 100vh;
+    }
+    
+    .header-nav-box.opened .header-login-btn {
+        padding: 1rem 2.5rem;
+        max-height: 100vh;
+        opacity: 1;
+    }
+    /* Media Queries */
+    
+    @media (min-width: 769px) {
+        html {
+            font-size: 75.5%;
+        }
+        .menu-toggle-btn {
+            display: none;
+        }
+        .header-nav {
+            flex-direction: row;
+            align-items: center;
+            background: var(--bg-white);
+            padding: 1rem var(--header-padding);
+        }
+        .header-login-btn,
+        .header-nav,
+        .header-nav-box.opened .header-nav,
+        .header-nav-box.opened .header-login-btn {
+            position: static;
+            overflow: visible;
+            max-height: 100vh;
+        }
+        .header-login-btn {
+            padding: 1rem 2.5rem;
+            opacity: 1;
+        }
+    }
