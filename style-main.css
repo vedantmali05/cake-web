@@ -1,0 +1,64 @@
+main {
+    margin: auto;
+    margin-top: 10rem;
+    padding: 2rem;
+    max-width: 100rem;
+}
+
+.main-heading {
+    font: 600 4.8rem/130% "Yeseva One", serif;
+}
+
+.descriptions {
+    padding: 2rem 0 2.5rem 0;
+    font: 400 1.6rem/130% "Kumbh Sans", sans-serif;
+    color: var(--text-red);
+}
+
+
+/* ////////////////////// Hero Section */
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    height: 100vh;
+    max-height: 30rem;
+}
+
+.hero-section>* {
+    flex-basis: 100%;
+}
+
+.hero-section .column-left {
+    min-width: 35rem;
+    text-align: center;
+}
+
+.hero-section .hero-illus {
+    margin: auto;
+    height: 100%;
+}
+
+.hero-section .hero-illus img {
+    object-fit: cover;
+    border-radius: 0 2rem 0 0;
+    box-shadow: -2rem 2rem var(--primary-green);
+}
+
+@media (min-width: 769px) {
+    .hero-section .column-left {
+        text-align: start;
+    }
+    .hero-section {
+        flex-wrap: nowrap;
+    }
+    .column-right {
+        height: 100%;
+    }
+    .hero-section .column-right figure {
+        max-width: 30rem;
+    }
+}
