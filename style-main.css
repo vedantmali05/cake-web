@@ -1,8 +1,10 @@
 main {
     margin: auto;
-    margin-top: 10rem;
+    margin-top: 7rem;
+}
+
+main>* {
     padding: 2rem;
-    max-width: 100rem;
 }
 
 .main-heading {
@@ -18,14 +20,23 @@ main {
 
 /* ////////////////////// Hero Section */
 
+.hero-section-wrapper {
+    background: url(images//hero-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-width: 30rem;
+    display: flex;
+    justify-content: center;
+}
+
 .hero-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     gap: 4rem;
-    height: 100vh;
-    max-height: 30rem;
+    max-width: 100rem;
 }
 
 .hero-section>* {
@@ -37,15 +48,29 @@ main {
     text-align: center;
 }
 
+.hero-section .column-right {
+    max-height: 30rem;
+}
+
 .hero-section .hero-illus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    height: 100%;
 }
 
 .hero-section .hero-illus img {
+    max-height: 30rem;
     object-fit: cover;
+    object-position: 0% 0%;
     border-radius: 0 2rem 0 0;
     box-shadow: -2rem 2rem var(--primary-green);
+}
+
+@media (min-width: 376px) {
+    .hero-section .column-right img {
+        max-width: 40rem;
+    }
 }
 
 @media (min-width: 769px) {
