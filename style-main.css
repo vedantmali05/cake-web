@@ -251,6 +251,7 @@ main {
 
 .quality-section .column-right {
     text-align: center;
+    order: -1;
 }
 
 .quality-section .column-left {
@@ -280,6 +281,7 @@ main {
     }
     .quality-section .column-right {
         text-align: start;
+        order: 1;
     }
     .quality-section {
         flex-wrap: nowrap;
