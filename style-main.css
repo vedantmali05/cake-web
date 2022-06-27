@@ -64,6 +64,11 @@ main {
     box-shadow: -2rem 2rem var(--primary-green);
 }
 
+.hero-section #hero_cta_price {
+    border-left: 1px solid var(--bg-white);
+    padding: 0 1rem;
+}
+
 @media (min-width: 376px) {
     .hero-section .column-right img {
         max-width: 40rem;
@@ -76,9 +81,6 @@ main {
     }
     .hero-section {
         flex-wrap: nowrap;
-    }
-    .column-right {
-        height: 100%;
     }
     .hero-section .column-right figure {
         max-width: 30rem;
@@ -218,10 +220,68 @@ main {
     }
     .features-section-wrapper .column-right {
         max-width: 60rem;
+        height: fit-content;
     }
     .features-section-wrapper .feature,
     .features-section-wrapper .benefit-title,
     .features-section-wrapper .benefit {
         max-width: 35rem;
+    }
+}
+
+
+/* //////////////////////////////////////// QUALITY SECTION */
+
+.quality-section-wrapper {
+    background: var(--bg-pale-orange);
+}
+
+.quality-section {
+    max-width: 100rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: auto
+}
+
+.quality-section>* {
+    flex-basis: 100%;
+}
+
+.quality-section .column-right {
+    text-align: center;
+}
+
+.quality-section .column-left {
+    max-height: 40rem;
+}
+
+.quality-section .quality-illus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.quality-section .quality-illus img {
+    max-height: 40rem;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 0 2rem 0 0;
+    box-shadow: -2rem 2rem var(--primary-green);
+}
+
+@media (min-width: 376px) {}
+
+@media (min-width: 769px) {
+    .quality-section .quality-illus img {
+        max-height: 30rem;
+    }
+    .quality-section .column-right {
+        text-align: start;
+    }
+    .quality-section {
+        flex-wrap: nowrap;
     }
 }
