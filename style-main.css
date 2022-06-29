@@ -442,8 +442,62 @@ main {
 @media (min-width: 769px) {
     .diet-section .column-right {
         text-align: start;
+        order: 1;
     }
     .diet-section {
         flex-wrap: nowrap;
     }
 }
+
+
+/* ///////////////////////////// ORDER SECTION  */
+
+.order-section-wrapper {
+    background: var(--bg-pale-orange);
+    border-top: 2px solid var(--primary-violet);
+    padding: 5rem 2rem;
+}
+
+.order-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 2rem;
+    max-width: 100rem;
+    margin: auto;
+}
+
+.order-section .order-heading {
+    font-size: 3.6rem;
+}
+
+.order-section .order-description {
+    text-align: center;
+}
+
+.order-section .order-date-box {
+    width: 100%;
+    max-width: 35rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem
+}
+
+.order-section #order_date_input {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--primary-violet);
+    background: var(--bg-pale-orange);
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .order-section .order-description {
+        text-align: start;
+    }
+}
+
+
+/* TODO: Git checklist
+    * Uncomment transitions */
